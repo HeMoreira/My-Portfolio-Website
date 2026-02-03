@@ -1,3 +1,6 @@
+/* ===================================
+   VARIÁVEIS CSS
+   =================================== */
 :root {
     --primary-light: #a4e8ff;
     --primary-color: #52a0ff;
@@ -8,4 +11,379 @@
     --text-yellow: #ffdd00;
     --text-light: #f5f5f5;
     --filter-black: rgba(15, 15, 15, 0.3);
+}
+
+/* Global Config */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+    background-color: var(--background-black);
+    color: var(--text-light);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- HEADER --- */
+
+header {
+    background-color: var(--primary-color);
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+header h1 {
+    color: var(--text-dark);
+    font-size: 1.5rem;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: bold;
+    padding: 8px 15px;
+    border: 2px solid var(--text-dark);
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+header nav a:hover {
+    background-color: var(--text-dark);
+    color: var(--primary-color);
+}
+
+/* ===================================
+   MAIN
+   =================================== */
+main {
+    flex: 1;
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* ===================================
+   ARTICLES E SECTIONS
+   =================================== */
+article {
+    background-color: var(--filter-black);
+    backdrop-filter: blur(10px);
+    padding: 2.5rem;
+    margin-bottom: 3rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+article:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+}
+
+section {
+    background-color: var(--filter-black);
+    padding: 2rem;
+    margin: 2rem 0;
+    border-radius: 12px;
+    border-left: 4px solid var(--primary-color);
+}
+
+/* ===================================
+   TÍTULOS
+   =================================== */
+article h1 {
+    color: var(--text-yellow);
+    text-align: center;
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+section h2 {
+    color: var(--text-yellow);
+    font-size: clamp(1.4rem, 4vw, 1.8rem);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+/* ===================================
+   TEXTOS E PARÁGRAFOS
+   =================================== */
+p {
+    color: var(--text-light);
+    font-size: clamp(1rem, 2.5vw, 1.1rem);
+    margin-bottom: 1.2rem;
+    text-align: justify;
+    line-height: 1.8;
+}
+
+/* ===================================
+   LISTAS
+   =================================== */
+ul {
+    margin: 1.5rem 0;
+    padding-left: 1rem;
+}
+
+ul li {
+    color: var(--text-light);
+    font-size: clamp(1.1rem, 2.8vw, 1.25rem);
+    font-family: 'Georgia', 'Times New Roman', serif;
+    margin-bottom: 0.8rem;
+    position: relative;
+}
+
+ul li::before {
+    color: var(--primary-light);
+    font-size: 1.5em;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* ===================================
+   BOTÕES/LINKS
+   =================================== */
+article a,
+section a {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: var(--text-light);
+    text-decoration: none;
+    padding: 0.8rem 2rem;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: clamp(0.9rem, 2.2vw, 1rem);
+    margin: 0.5rem 0.5rem 0.5rem 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(82, 160, 255, 0.3);
+    border: 2px solid transparent;
+}
+
+article a:hover,
+section a:hover {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-light));
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(82, 160, 255, 0.5);
+    border-color: var(--primary-light);
+}
+
+article a:active,
+section a:active {
+    transform: translateY(-1px);
+}
+
+/* ===================================
+   SEÇÕES DE PROJETOS (LAYOUT FLEXÍVEL)
+   =================================== */
+article:nth-of-type(3) section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+    padding: 2.5rem;
+}
+
+/* Projeto Banana Chips - Imagem à direita */
+article:nth-of-type(3) section:first-of-type {
+    flex-direction: row;
+}
+
+article:nth-of-type(3) section:first-of-type > *:not(img) {
+    flex: 1 1 300px;
+}
+
+article:nth-of-type(3) section:first-of-type img {
+    flex: 0 1 300px;
+    order: 2;
+}
+
+/* Projeto Coelho da Páscoa - Imagem à esquerda */
+article:nth-of-type(3) section:nth-of-type(2) {
+    flex-direction: row-reverse;
+}
+
+article:nth-of-type(3) section:nth-of-type(2) > *:not(img) {
+    flex: 1 1 300px;
+}
+
+article:nth-of-type(3) section:nth-of-type(2) img {
+    flex: 0 1 300px;
+    order: 1;
+}
+
+/* ===================================
+   IMAGENS
+   =================================== */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    display: block;
+    margin: 1rem 0;
+}
+
+article img {
+    margin: 2rem auto;
+    display: block;
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: var(--background-blue);
+    padding: 40px 5%;
+    text-align: center;
+    border-top: 3px solid var(--primary-dark);
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: var(--primary-light);
+}
+
+/* ===================================
+   RESPONSIVIDADE - TABLET
+   =================================== */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1.5rem 1rem;
+    }
+
+    header nav ul {
+        gap: 1rem;
+    }
+
+    main {
+        padding: 1.5rem;
+    }
+
+    article {
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    section {
+        padding: 1.5rem;
+    }
+
+    /* Projetos em coluna no tablet */
+    article:nth-of-type(3) section,
+    article:nth-of-type(3) section:first-of-type,
+    article:nth-of-type(3) section:nth-of-type(2) {
+        flex-direction: column !important;
+    }
+
+    article:nth-of-type(3) section img {
+        order: 0;
+        flex: 1 1 auto;
+        max-width: 100%;
+    }
+}
+
+/* ===================================
+   RESPONSIVIDADE - MOBILE
+   =================================== */
+@media (max-width: 480px) {
+    header {
+        padding: 1rem;
+    }
+
+    header nav ul {
+        gap: 0.8rem;
+    }
+
+    header nav ul li a {
+        padding: 0.4rem 0.8rem;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    article {
+        padding: 1.2rem;
+        margin-bottom: 1.5rem;
+        border-radius: 12px;
+    }
+
+    section {
+        padding: 1rem;
+        margin: 1.5rem 0;
+    }
+
+    article a,
+    section a {
+        padding: 0.7rem 1.5rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    ul {
+        padding-left: 0.5rem;
+    }
+
+    ul li {
+        padding-left: 1.2rem;
+    }
+
+    footer {
+        padding: 1.5rem 1rem;
+    }
+}
+
+/* ===================================
+   ACESSIBILIDADE
+   =================================== */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Foco visível para navegação por teclado */
+a:focus,
+button:focus {
+    outline: 3px solid var(--primary-light);
+    outline-offset: 2px;
+}
+
+/* ===================================
+   OTIMIZAÇÕES DE PERFORMANCE
+   =================================== */
+img {
+    will-change: transform;
+}
+
+article,
+section {
+    will-change: transform;
 }
