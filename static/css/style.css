@@ -269,7 +269,7 @@ article section p {
 img {
     width: clamp(20rem, 2vw, 5rem);
     height: auto;
-    border-radius: 12px;
+    border-radius: 18px;
     border: 2px solid var(--background-blue);
 }
 
