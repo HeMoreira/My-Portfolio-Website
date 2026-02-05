@@ -6,16 +6,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}html base{% endblock %}</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/stylee.css' %}">
 </head>
 <body>
     <header>
         <h1>CONTATOS:</h1>
         <nav>
             <ul>
-                <li><a href="https://www.linkedin.com/in/henrique-ferreira-moreira-a4281b321/">Ln</a></li>
-                <li><a href="https://github.com/HeMoreira">GH</a></li>
-                <li><a href="https://wa.me/5511966459097">WA</a></li>
+                <li><a href="https://www.linkedin.com/in/henrique-ferreira-moreira-a4281b321/" target="_blank"><img src="{% static 'images/linkedin_icon.png' %}" alt="icone do linkedin (link para minha página)"></a></li>
+                <li><a href="https://github.com/HeMoreira" target="_blank"><img src="{% static 'images/github_icon.webp' %}" alt="icone do github (link para minha página)"></a></li>
+                <li><a href="https://wa.me/5511966459097" target="_blank"><img src="{% static 'images/whatsapp_icon.webp' %}" alt="icone do whatsapp (link para me adicionar)"></a></li>
             </ul>
         </nav>
     </header>
