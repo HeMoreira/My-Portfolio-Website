@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block title %}Henrique F. Moreira{% endblock %}
 
 
@@ -22,6 +24,7 @@
         <ul class="custom-list">
             <li>Formado Técnico de Informática na Oswaldo Cruz.</li>
             <li>Cursando Análise e Desenvolvimento de Sistemas na Uninove.</li>
+            <li>Certificado Incrível de inglês (ainda não existe :P)</li>
             <li>Diversos projetos que podem ser analizados na sessão abaixo.</li>
         </ul>
     </article>
@@ -31,17 +34,17 @@
             <div class="project-text">
                 <h2>Projeto Consultation Station</h2>
                 <p>Site de agendamento de consultas. Baseado no sistema CRUD e possui sistemas como perfil personalizável, sistema de autenticação completo, visualização de consultas, etc.</p>
-                <a href="" class="btn">Ver Mais</a>
+                <a href="https://consultation-station.onrender.com" target="_blank" class="btn">Ver Site</a>
             </div>
-            <img src="https://via.placeholder.com/300" alt="Banana Chips" class="project-img">
+            <img src="{% static 'images/consultation_station_project.png' %}" alt="Banana Chips" class="project-img">
         </section>
         <section class="project-card img-right">
             <div class="project-text">
                 <h2>Projeto Crazy Chess</h2>
                 <p>Projeto Python que te permite jogar partidas completas de xadrez no console. Apesar do design arcáico, demonstra minha capacidade para solucionar problemas lógicos complexos.</p>
-                <a href="" class="btn">Ver Mais</a>
+                <a href="https://github.com/HeMoreira/Crazy-Chess" target="_blank" class="btn">Ver GitHub</a>
             </div>
-            <img src="https://via.placeholder.com/300" alt="Coelho da Pascoa" class="project-img">
+            <img src="{% static 'images/crazy_chess_project.png' %}" alt="Coelho da Pascoa" class="project-img">
         </section>
     </article>
     <article class="content-box" id="overview">
