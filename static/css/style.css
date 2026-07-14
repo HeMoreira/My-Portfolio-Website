@@ -6,6 +6,7 @@
     --text-dark: #1f1f1f;
     --text-yellow: #ffdd00;
     --text-light: #f5f5f5;
+    --text-muted: #9e9e9e;
     --filter-black: rgba(0, 0, 0, 0.3);
 }
 
@@ -310,6 +311,11 @@ article section.project-card h2 {
 }
 article section.project-card p {
     max-width: 100%;
+}
+article section.project-card small,
+article section.project-card small a {
+    font-size: 0.8rem;
+    color: var(--text-muted);
 }
 
 /* --- IMAGES --- */
