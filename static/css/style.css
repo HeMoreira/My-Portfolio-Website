@@ -318,17 +318,14 @@ article section.project-card small a {
     color: var(--text-muted);
 }
 
-/* --- IMAGES --- */
-.project-img, .full-img {
+/* --- IMAGES & VIDEOS --- */
+.project-video, .full-img {
     width: 100%;
+    max-width: 650px;
     border-radius: 12px;
     border: 2px solid var(--primary-color);
     display: block;
     box-shadow: 0 0 5px var(--primary-color);
-}
-.project-img {
-    object-fit: cover;
-    height: auto;
 }
 .full-img {
     margin: 2rem auto 0;
