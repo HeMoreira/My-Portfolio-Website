@@ -40,11 +40,12 @@
                 <a href="https://github.com/HeMoreira/Brawl-Stars-Brawler-Picker" target="_blank" class="btn btn-primary">Ver GitHub</a>
             </div>
             <div class="project-img-wrapper">
-                <video controls poster="capa.jpg" class="project-video">
-                    <source src="{% static 'videos/brawler_picker_project.mp4' %}" type="video/mp4">
-                    Seu navegador não suporta a tag de vídeo. :/
-                </video>
+                {% include 'main/partials/project-video.html' with video_path='videos/brawler_picker_project.mp4' %}
             </div>
+            {% include 'main/partials/progress-bar.html' with progress_label="Aplicação de Matemática Complexa:" progress="85%" %}
+            {% include 'main/partials/progress-bar.html' with progress_label="Segurança Avançada (em andamento):" progress="15%" %}
+            {% include 'main/partials/progress-bar.html' with progress_label="Resolução de Problemas Complexos:" progress="75%" %}
+            {% include 'main/partials/progress-bar.html' with progress_label="Manipulação de Massas de Dados:" progress="80%" %}
         </section>
 
         <section class="project-card">
@@ -54,11 +55,12 @@
                 <a href="https://github.com/HeMoreira/Imaginaria-Imobiliaria" target="_blank" class="btn btn-primary">Ver GitHub</a>
             </div>
             <div class="project-img-wrapper">
-                <video controls poster="capa.jpg" class="project-video">
-                    <source src="{% static 'videos/imaginaria_imobiliaria_project.mp4' %}" type="video/mp4">
-                    Seu navegador não suporta a tag de vídeo. :/
-                </video>
+                {% include 'main/partials/project-video.html' with video_path="videos/imaginaria_imobiliaria_project.mp4" %}
             </div>
+            {% include 'main/partials/progress-bar.html' with progress_label="Sistema CRUD pronto para uso:" progress="75%" %}
+            {% include 'main/partials/progress-bar.html' with progress_label="Desenvolvimento de Testes:" progress="0%" %}
+            {% include 'main/partials/progress-bar.html' with progress_label="Segurança Avançada:" progress="95%" %}
+            {% include 'main/partials/progress-bar.html' with progress_label="Rápida Adaptabilidade:" progress="80%" %}
         </section>
 
         <section class="project-card">
@@ -68,11 +70,12 @@
                 <a href="https://github.com/HeMoreira/Estuda-Test" target="_blank" class="btn btn-primary">Ver GitHub</a>
             </div>
             <div class="project-img-wrapper">
-                <video controls poster="capa.jpg" class="project-video">
-                    <source src="{% static 'videos/estudatest_project.mp4' %}" type="video/mp4">
-                    Seu navegador não suporta a tag de vídeo. :/
-                </video>
+                {% include 'main/partials/project-video.html' with video_path="videos/estudatest_project.mp4" %}
             </div>
+            {% include 'main/partials/progress-bar.html' with progress_label="Resolução de Problemas Reais:" progress="80%" %}
+            {% include 'main/partials/progress-bar.html' with progress_label="Sistema CRUD com autenticação:" progress="50%" %}
+            {% include 'main/partials/progress-bar.html' with progress_label="Desenvolvimento de Testes:" progress="95%" %}
+            {% include 'main/partials/progress-bar.html' with progress_label="Segurança Avançada (Em andamento):" progress="25%" %}
         </section>
         
         <section class="project-card">
@@ -83,11 +86,12 @@
                 <p><small>Você também pode acessar o site em <a href="https://consultation-station.onrender.com" target="_blank">https://consultation-station.onrender.com</a></small></p>
             </div>
             <div class="project-img-wrapper">
-                <video controls poster="capa.jpg" class="project-video">
-                    <source src="{% static 'videos/consultation_station_project.mp4' %}" type="video/mp4">
-                    Seu navegador não suporta a tag de vídeo. :/
-                </video>
+                {% include 'main/partials/project-video.html' with video_path="videos/consultation_station_project.mp4" %}
             </div>
+            {% include 'main/partials/progress-bar.html' with progress_label="Sistema CRUD com autenticação:" progress="85%" %}
+            {% include 'main/partials/progress-bar.html' with progress_label="Segurança Avançada:" progress="10%" %}
+            {% include 'main/partials/progress-bar.html' with progress_label="Organização e divisão de responsabilidades:" progress="70%" %}
+            {% include 'main/partials/progress-bar.html' with progress_label="Desenvolvimento de Testes:" progress="55%" %}
         </section>
 
         <section class="project-card">
@@ -97,11 +101,12 @@
                 <a href="https://github.com/HeMoreira/Crazy-Chess" target="_blank" class="btn btn-primary">Ver GitHub</a>
             </div>
             <div class="project-img-wrapper">
-                <video controls poster="capa.jpg" class="project-video">
-                    <source src="{% static 'videos/crazy_chess_project.mp4' %}" type="video/mp4">
-                    Seu navegador não suporta a tag de vídeo. :/
-                </video>
+                {% include 'main/partials/project-video.html' with video_path="videos/crazy_chess_project.mp4" %}
             </div>
+            {% include 'main/partials/progress-bar.html' with progress_label="Resolução de Problemas Complexos:" progress="90%" %}
+            {% include 'main/partials/progress-bar.html' with progress_label="Lógica de Programação:" progress="75%" %}
+            {% include 'main/partials/progress-bar.html' with progress_label="Interface Gráfica:" progress="15%" %}
+            {% include 'main/partials/progress-bar.html' with progress_label="Programação Orientada a Objetos:" progress="60%" %}
         </section>
     </article>
 
@@ -109,7 +114,7 @@
         <h1>VISÃO GERAL</h1>
         <p>Sou um desenvolvedor entusiasmado <strong>capaz de desenvolver sites completos</strong>, apesar do foco em Backend. Sou Formado em <strong>Técnico de Informática</strong> e sigo cursando <strong>Análise e Desenvolvimento de Sistemas</strong> na Uninove. Adoro aprender coisas novas e me envolvo profundamente em tudo que estou aprendendo. :P</p>
         <div class="full-img-wrapper">
-            <img src="https://via.placeholder.com/1200x400/07203f/f5f5f5?text=Visao+Geral+do+Desenvolvimento" alt="Overview" class="full-img">
+            <img src="{% static 'images/eu_icone.jpg' %}" alt="Meu rosto :P" class="full-img">
         </div>
     </article>
 </main>
